@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Downloader – Download Videos, Reels, Photos & IGTV Free | InstaDown Pro</title>
+    <meta name="description"
+        content="Free Instagram Downloader tool to download Instagram Videos, Reels, Photos, IGTV, Stories and Carousel in HD quality. No login required. Works on all devices.">
+    <meta name="keywords"
+        content="instagram downloader, instagram video downloader, download instagram reels, instagram photo downloader, instagram story downloader, igtv downloader, free instagram downloader, download instagram videos online">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="InstaDown Pro">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Instagram Downloader – Download Videos, Reels and Photos Free">
+    <meta property="og:description"
+        content="Download Instagram videos reels photos stories and IGTV for free in HD. No login needed. Fast and secure.">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Instagram Downloader – Free Online Tool">
+    <meta name="twitter:description" content="Download Instagram videos reels and photos for free. No login required.">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "InstaDown Pro",
+      "description": "Free Instagram downloader tool to save videos reels photos IGTV stories and carousels in HD quality",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is it free to download Instagram videos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes InstaDown Pro is completely free to use. No subscription or login required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to log in to download Instagram content?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Simply paste the public Instagram link and click Download. No account needed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What types of Instagram content can I download?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can download Videos, Reels, Photos, IGTV, Stories, and Carousel albums."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(45deg, #833AB4, #FD1D1D, #F77737);
+            --dark-bg: #121212;
+            --light-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        /* --- Navbar --- */
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--dark-bg);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: #F77737;
+        }
+
+        .hamburger {
+            display: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 5rem 5% 4rem;
+            text-align: center;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=1920') no-repeat center center/cover;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .downloader-container {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .input-group {
+            display: flex;
+            background: var(--white);
+            padding: 5px;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 2px solid transparent;
+            transition: var(--transition);
+        }
+
+        .input-group:focus-within {
+            border-color: #FD1D1D;
+        }
+
+        .input-group input {
+            flex: 1;
+            border: none;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            outline: none;
+            background: transparent;
+        }
+
+        .btn-download {
+            background: var(--primary-gradient);
+            border: none;
+            color: var(--white);
+            padding: 0 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-download:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .btn-clear {
+            position: absolute;
+            right: 220px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #ccc;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: none;
+        }
+
+        .btn-clear:hover {
+            color: #999;
+        }
+
+        #error-msg {
+            color: #FD1D1D;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            display: none;
+        }
+
+        /* --- Loading and Result --- */
+        .loading {
+            display: none;
+            margin-top: 2rem;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #FD1D1D;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .result-card {
+            display: none;
+            max-width: 400px;
+            margin: 3rem auto 0;
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            animation: slideUp 0.5s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .result-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .result-content {
+            padding: 1.5rem;
+        }
+
+        .result-content h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .result-btns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .btn-res {
+            padding: 0.8rem;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .btn-mp4 {
+            background: var(--primary-gradient);
+            color: var(--white);
+        }
+
+        .btn-photo {
+            background: #f0f0f0;
+            color: var(--text-main);
+        }
+
+        .btn-res:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* --- Sections Common --- */
+        section {
+            padding: 5rem 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 3.5rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-gradient);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* --- How It Works --- */
+        .how-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .how-card {
+            text-align: center;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 20px;
+            transition: var(--transition);
+        }
+
+        .how-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .how-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .how-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .how-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* --- Features & Why Choose --- */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feat-card {
+            padding: 2.5rem;
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 20px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feat-card:hover {
+            border-color: #FD1D1D;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .feat-card i {
+            font-size: 2.5rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem;
+        }
+
+        .feat-card h3 {
+            margin-bottom: 1rem;
+        }
+
+        .feat-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .why-card {
+            padding: 1.5rem;
+            text-align: center;
+            background: #fdfdfd;
+            border-radius: 15px;
+            border-left: 5px solid #F77737;
+        }
+
+        .why-card h4 {
+            margin-top: 0.5rem;
+        }
+
+        /* --- FAQ Accordion --- */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            background: #fafafa;
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+
+        .faq-header {
+            padding: 1.2rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .faq-header:hover {
+            background: #f0f0f0;
+        }
+
+        .faq-header h3 {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .faq-header i {
+            transition: var(--transition);
+        }
+
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background: var(--white);
+        }
+
+        .faq-item.active .faq-content {
+            max-height: 200px;
+        }
+
+        .faq-item.active .faq-header i {
+            transform: rotate(180deg);
+        }
+
+        .faq-text {
+            padding: 1.2rem 1.5rem;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--dark-bg);
+            color: var(--white);
+            padding: 4rem 5% 2rem;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--dark-bg);
+                padding: 2rem;
+                text-align: center;
+                gap: 1.5rem;
+                border-top: 1px solid #333;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .btn-download {
+                padding: 0 1.5rem;
+            }
+
+            .btn-clear {
+                right: 160px;
+            }
+
+            section {
+                padding: 3.5rem 5%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .input-group {
+                flex-direction: column;
+                border-radius: 15px;
+                padding: 10px;
+            }
+
+            .input-group input {
+                padding: 0.8rem;
+            }
+
+            .btn-download {
+                border-radius: 10px;
+                padding: 0.8rem;
+                justify-content: center;
+            }
+
+            .btn-clear {
+                right: 20px;
+                top: 30px;
+            }
+
+            .result-btns {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#" class="logo">InstaDown Pro</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Instagram Downloader – Download Videos, Reels, Photos & IGTV Free</h1>
+        <p>The fastest free online tool to download Instagram content in HD quality. No login required. Works on all
+            devices.</p>
+
+        <div class="downloader-container">
+            <div class="input-group">
+                <input type="text" id="insta-url" placeholder="Paste Instagram link here..." oninput="handleInput()">
+                <button class="btn-clear" id="clear-btn" onclick="clearField()"><i
+                        class="fas fa-times-circle"></i></button>
+                <button class="btn-download" onclick="startDownload()">
+                    <i class="fas fa-download"></i> Download Now
+                </button>
+            </div>
+            <p id="error-msg">Please enter a valid Instagram URL (e.g., instagram.com/p/...)</p>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p style="margin-top: 10px; color: var(--text-light);">Processing your request...</p>
+            </div>
+
+            <div class="result-card" id="resultCard">
+                <img src="https://images.unsplash.com/photo-1611262588024-d12430b98920?auto=format&fit=crop&q=80&w=400"
+                    alt="Instagram Thumbnail">
+                <div class="result-content">
+                    <h3>Instagram Content Ready to Download</h3>
+                    <div class="result-btns">
+                        <button class="btn-res btn-mp4"><i class="fas fa-video"></i> Download MP4</button>
+                        <button class="btn-res btn-photo"><i class="fas fa-image"></i> Download Photo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works">
+        <h2 class="section-title">How to Download Instagram Content</h2>
+        <div class="how-grid">
+            <div class="how-card">
+                <span class="how-icon">📋</span>
+                <h3>Step 1: Copy URL</h3>
+                <p>Open Instagram and copy the post, reel, or photo link from the browser or app menu.</p>
+            </div>
+            <div class="how-card">
+                <span class="how-icon">⌨️</span>
+                <h3>Step 2: Paste Link</h3>
+                <p>Paste the link into the input box above and click the "Download Now" button.</p>
+            </div>
+            <div class="how-card">
+                <span class="how-icon">💾</span>
+                <h3>Step 3: Save File</h3>
+                <p>Choose your preferred format (MP4 or Photo) and save the file directly to your device.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" style="background-color: #f9f9f9;">
+        <h2 class="section-title">What You Can Download</h2>
+        <div class="features-grid">
+            <div class="feat-card">
+                <i class="fas fa-video"></i>
+                <h3>Video Downloader</h3>
+                <p>Download any Instagram video in high-quality MP4 format with just one click.</p>
+            </div>
+            <div class="feat-card">
+                <i class="fas fa-film"></i>
+                <h3>Reels Downloader</h3>
+                <p>Save your favorite Instagram Reels in HD without any watermark or quality loss.</p>
+            </div>
+            <div class="feat-card">
+                <i class="fas fa-camera"></i>
+                <h3>Photo Downloader</h3>
+                <p>Download single photos or high-resolution images from any public Instagram post.</p>
+            </div>
+            <div class="feat-card">
+                <i class="fas fa-tv"></i>
+                <h3>IGTV Downloader</h3>
+                <p>Easily save long-form IGTV videos to your device for offline viewing anytime.</p>
+            </div>
+            <div class="feat-card">
+                <i class="fas fa-images"></i>
+                <h3>Carousel Downloader</h3>
+                <p>Download full Instagram albums, galleries, and carousel posts effortlessly.</p>
+            </div>
+            <div class="feat-card">
+                <i class="fas fa-history"></i>
+                <h3>Story Saver</h3>
+                <p>Save interesting Instagram Stories to your device before they disappear after 24 hours.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section>
+        <h2 class="section-title">Why Choose InstaDown Pro</h2>
+        <div class="why-grid">
+            <div class="why-card">
+                <i class="fas fa-bolt" style="color: #FD1D1D;"></i>
+                <h4>Fast Download</h4>
+                <p>Lightning fast processing speed for all content.</p>
+            </div>
+            <div class="why-card">
+                <i class="fas fa-certificate" style="color: #FD1D1D;"></i>
+                <h4>HD Quality</h4>
+                <p>Original resolution with no added watermark.</p>
+            </div>
+            <div class="why-card">
+                <i class="fas fa-user-slash" style="color: #FD1D1D;"></i>
+                <h4>No Login Required</h4>
+                <p>Complete privacy. No need to share credentials.</p>
+            </div>
+            <div class="why-card">
+                <i class="fas fa-shield-alt" style="color: #FD1D1D;"></i>
+                <h4>100% Free & Secure</h4>
+                <p>Unlimited downloads with zero cost and high security.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" style="background-color: #f9f9f9;">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <h3>Q1: Is it free to download Instagram videos?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-content">
+                    <div class="faq-text">A: Yes, InstaDown Pro is completely free. No subscription or hidden fees are
+                        required.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <h3>Q2: Do I need to log in?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-content">
+                    <div class="faq-text">A: No, you don't need to log in or create an account. Simply paste the public
+                        link and download.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <h3>Q3: What content can I download?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-content">
+                    <div class="faq-text">A: You can download Videos, Reels, Photos, IGTV, Stories, and Carousel albums.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <h3>Q4: What quality will downloads be?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-content">
+                    <div class="faq-text">A: All downloads are in the original HD quality provided by Instagram, with no
+                        watermark added.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <h3>Q5: Does it work on mobile?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-content">
+                    <div class="faq-text">A: Yes, our tool is fully responsive and works perfectly on all Android, iOS
+                        devices, and all modern browsers.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <h3>Q6: Can I download from private accounts?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-content">
+                    <div class="faq-text">A: No, for security and privacy reasons, our tool only supports downloading
+                        from public Instagram accounts.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <h3>Q7: Where do downloaded files go?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-content">
+                    <div class="faq-text">A: Files are saved to your device's default Downloads folder, unless you've
+                        specified a different location in your browser settings.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <h3>Q8: Is my data or link stored?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-content">
+                    <div class="faq-text">A: No, we respect your privacy. Links are processed in real-time and we never
+                        store any of your data or history.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <h3>Q9: How many downloads per day?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-content">
+                    <div class="faq-text">A: There are no daily limits. You can perform unlimited downloads for free.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <h3>Q10: Which browsers are supported?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-content">
+                    <div class="faq-text">A: We support all major browsers including Chrome, Safari, Firefox, Edge,
+                        Opera, and Brave.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <h2>InstaDown Pro</h2>
+                <p>Your ultimate tool for high-quality Instagram downloads.</p>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 InstaDown Pro. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Close menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+
+        // --- Input Handling ---
+        function handleInput() {
+            const input = document.getElementById('insta-url');
+            const clearBtn = document.getElementById('clear-btn');
+            if (input.value.length > 0) {
+                clearBtn.style.display = 'block';
+            } else {
+                clearBtn.style.display = 'none';
+            }
+            document.getElementById('error-msg').style.display = 'none';
+        }
+
+        function clearField() {
+            const input = document.getElementById('insta-url');
+            input.value = '';
+            document.getElementById('clear-btn').style.display = 'none';
+            document.getElementById('resultCard').style.display = 'none';
+            document.getElementById('error-msg').style.display = 'none';
+            input.focus();
+        }
+
+        // --- Download Logic ---
+        function startDownload() {
+            const urlInput = document.getElementById('insta-url').value.trim();
+            const errorMsg = document.getElementById('error-msg');
+            const loading = document.getElementById('loading');
+            const resultCard = document.getElementById('resultCard');
+
+            // Validation
+            if (!urlInput.includes('instagram.com')) {
+                errorMsg.style.display = 'block';
+                resultCard.style.display = 'none';
+                return;
+            }
+
+            // Mocking the process
+            errorMsg.style.display = 'none';
+            resultCard.style.display = 'none';
+            loading.style.display = 'block';
+
+            setTimeout(() => {
+                loading.style.display = 'none';
+                resultCard.style.display = 'block';
+                // Scroll to result on mobile
+                if (window.innerWidth < 768) {
+                    resultCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+
+                // Add events to result buttons if not already there
+                const mp4Btn = resultCard.querySelector('.btn-mp4');
+                const photoBtn = resultCard.querySelector('.btn-photo');
+
+                mp4Btn.onclick = (e) => simulateDownload('Video_HD.mp4', e);
+                photoBtn.onclick = (e) => simulateDownload('Instagram_Photo.jpg', e);
+
+            }, 2000);
+        }
+
+        function simulateDownload(filename, event) {
+            const btn = event.currentTarget;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Downloading...';
+            btn.style.pointerEvents = 'none';
+            btn.style.opacity = '0.7';
+
+            setTimeout(() => {
+                // For a real download experience, we can create a dummy blob
+                const blob = new Blob(["This is a mock " + filename + " file content."], { type: "text/plain" });
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+                document.body.removeChild(a);
+
+                btn.innerHTML = originalText;
+                btn.style.pointerEvents = 'all';
+                btn.style.opacity = '1';
+
+                // Show success message
+                const toast = document.createElement('div');
+                toast.style.position = 'fixed';
+                toast.style.bottom = '20px';
+                toast.style.left = '50%';
+                toast.style.transform = 'translateX(-50%)';
+                toast.style.background = '#333';
+                toast.style.color = '#fff';
+                toast.style.padding = '10px 20px';
+                toast.style.borderRadius = '5px';
+                toast.style.zIndex = '10001';
+                toast.innerHTML = `<i class="fas fa-check-circle" style="color: #4CAF50;"></i> ${filename} Download Successfully!`;
+                document.body.appendChild(toast);
+                setTimeout(() => toast.remove(), 3000);
+            }, 1500);
+        }
+
+        // --- FAQ Toggle ---
+        function toggleFaq(header) {
+            const item = header.parentElement;
+            const isActive = item.classList.contains('active');
+
+            // Close all items
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+
+        // Smooth Scroll for Nav Links (handled by HTML scroll-behavior: smooth, but ensuring JS fallback if needed)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 70, // Offset for sticky nav
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
